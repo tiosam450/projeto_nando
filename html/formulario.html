@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_projetos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- FORMULÁRIO -->
+    <section class="container_formulario" id="formulario">
+        <div class="formulario">
+            <div class="infoForm">
+                <h1 class="titulo_azul btn_fecha">Faça parte<br>deste projeto</h1>
+                <p>Se você tem um projeto que se encaixa em uma destas categorias preencha o formulário e faça
+                    parte do Projeto Nando!</p>
+            </div>
+            <form class="formphp" action="https://formsubmit.co/projetonando@cobrainformatica.com" method="POST" enctype="multipart/form-data">
+                <input type="text" name="empresa" placeholder="Empresa" required>
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="telefone" id="telefone" placeholder="Celular" maxlength="15" required />
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="cidade" placeholder="Cidade" required>
+                <textarea name="mansagem" cols="1" rows="1" placeholder="Mensagem"></textarea>
+                <input type="file" name="arquivo" id="img" style="display:none;" />
+                <input type="hidden" name="_subject" value="Contado do site Cobra Informática">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="file" name="attachment">
+                <input type="text" name="_honey" style="display:none">
+                <!-- <button class="btn_anexo"><label for="img">Anexar arquivo</label></button> -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/pagina_de_agradecimento.html">
+                <button id="enviar" name="enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="container_formulario_mobile" id="formulario">
+        <div class="formulario_mobile">
+            <div class="infoForm">
+                <h1 class="titulo_azul btn_fecha">Faça parte deste projeto</h1>
+                <hr>
+                <p>Se você tem um projeto que se encaixa em uma destas categorias preencha o formulário e faça
+                    parte do Projeto Nando!</p>
+            </div>
+            <form class="formphp" action="https://formsubmit.co/projetonando@cobrainformatica.com" method="POST" enctype="multipart/form-data">
+                <input type="text" name="empresa" placeholder="Empresa" required>
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="telefone" id="telefone" placeholder="Celular" maxlength="15" required />
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="cidade" placeholder="Cidade" required>
+                <textarea name="mansagem" cols="1" rows="1" placeholder="Mensagem"></textarea>
+                <input type="file" name="arquivo" id="img" style="display:none;" />
+                <input type="hidden" name="_subject" value="Contado do site Cobra Informática">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="file" name="attachment">
+                <input type="text" name="_honey" style="display:none">
+                <!-- <button class="btn_anexo"><label for="img">Anexar arquivo</label></button> -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/pagina_de_agradecimento.html">
+                <button id="enviar" name="enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- <script src="../js/simple-form.js"></script> -->
+    <script src="../js/form.js"></script>
+
+</body>
+
+</html>
+

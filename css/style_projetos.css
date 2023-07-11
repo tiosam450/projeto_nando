@@ -1,0 +1,548 @@
+:root {
+    --azul: #1c3c72;
+    --bgazul: #f1f6ff;
+    --cinza: #3c3c3c;
+    --gradienteAzul: linear-gradient(45deg, #1b5183, #2bc6e1);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+p {
+    color: var(--cinza);
+    font-size: 1.3em;
+    letter-spacing: .05em;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--azul);
+}
+
+/* CABEÇALHO */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 187, 255, 0) 86%, rgba(0, 187, 255, 0) 100%);
+}
+
+header .logo {
+    max-width: 200px;
+    margin: 30px;
+}
+
+nav {
+    width: 30px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.btnFecharProjetos {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 30px;
+    padding: 10px;
+    color: white;
+    width: 35px;
+    cursor: pointer;
+}
+
+.btnFecharProjetos:hover {
+    transform: scale(1.1);
+}
+
+/* Banner Home*/
+.home {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+}
+
+.sliderHome {
+    /* position: relative; */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBanner {
+    position: absolute;
+    left: 20%;
+    top: 22%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    height: 400px;
+}
+
+.infoBanner h1,
+.infoBanner p {
+    color: white;
+    text-align: left;
+}
+
+.tituloBanner {
+    display: flex;
+    align-items: center;
+}
+
+.tituloBanner img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Icon Down */
+.iconDown {
+    position: relative;
+    max-width: 40px;
+    margin: -80px auto 100px;
+    z-index: 600;
+    animation: seta 1s ease-in-out infinite;
+}
+
+@keyframes seta {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* DESCRIÇÃO */
+.descricaoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg #f0f8f1, #fff);
+}
+
+.descricao {
+    margin: 60px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.texto {
+    text-align: center;
+}
+
+/* PROJETOS APOIADOS */
+.projetosApoiadosConteiner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.projetosApoiados {
+    max-width: 1800px;
+    display: flex;
+    justify-content:last baseline;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    max-width: 700px;
+    margin: 60px;
+}
+
+.projetos h1 {
+    color: var(--cinza);
+    font-size: 1.6em;
+    margin: 0 0 20px;
+}
+
+.projetos p {
+    color: var(--cinza);
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.projetos img {
+    width: 250px;
+    padding-right: 60px;
+}
+
+@media (max-width: 600px) {
+    .projetos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 700px;
+        margin: 60px;
+    }
+
+    .projetos h1 {
+        color: var(--cinza);
+        font-size: 1.6em;
+        text-align: center;
+        margin: 0 0 20px;
+    }
+
+    .projetos p {
+        color: var(--cinza);
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .projetos img {
+        width: 200px;
+        margin-bottom: 60px;
+        padding-right: 0;
+    }
+}
+
+/* FORMULÁRIO */
+.container_formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    animation: entrada .2s;
+}
+
+.container_formulario_mobile {
+    display: none;
+}
+
+.animacao_saida {
+    animation: saida .2s;
+}
+
+@keyframes entrada {
+    0% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes saida {
+    100% {
+        transform: translateX(0px);
+    }
+
+    0% {
+        transform: translateX(300px);
+    }
+}
+
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgazul);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 100px;
+}
+
+.formulario h1 {
+    font-size: 2em;
+}
+
+.formulario p {
+    margin-bottom: 60px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.infoForm {
+    max-width: 400px;
+    padding: 130px 30px;
+    border-right: 1px solid gray;
+    margin-right: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form input {
+    font-size: 1em;
+    margin: 0 10px 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: white;
+    color: var(--cinza);
+}
+
+::placeholder {
+    color: var(--cinza);
+}
+
+form textarea {
+    font-size: 1em;
+    margin: 0 10px 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    color: var(--cinza);
+}
+
+.btn_anexo {
+    background-color: var(--azulBebe);
+    margin: 0 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(194, 194, 194);
+    color: var(--cinza);
+    letter-spacing: 0;
+    transition: .2s ease-in-out;
+
+}
+
+form button {
+    margin: 30px auto 0;
+    padding: 15px 70px;
+    border-radius: 30px;
+    background: var(--azul);
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+form button:hover {
+    transform: scale(1.04);
+    transition: .2s ease-in-out;
+}
+
+#form-erro,
+#form-sucesso p {
+    color: var(--azul);
+}
+
+#form-sucesso {
+    color: var(--azul);
+}
+
+@media (max-width: 1366px) {
+    .container_formulario {
+        z-index: 500;
+        margin: -100px 20px 0;
+        /* transform: scale(0.7); */
+    }
+}
+
+@media (max-width: 700px) {
+    .container_formulario {
+        display: none;
+    }
+
+    .container_formulario_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        animation: entrada .2s;
+    }
+
+    .infoForm {
+        max-width: 100%;
+        border: none;
+        margin-right: 0px;
+    }
+
+    .formulario_mobile {
+        display: block;
+        margin-bottom: 0;
+        margin: 0 10px 100px;
+        max-width: 700px;
+        padding: 50px 30px 70px;
+        text-align: center;
+        background: var(--bgazul);
+        border-radius: 20px;
+        z-index: 50px;
+    }
+
+    .infoForm hr {
+        border: 2px solid var(--azul);
+        background: var(--azul);
+        width: 60px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .formulario p,
+    .formulario h1 {
+        text-align: center;
+    }
+}
+
+.copy {
+    padding: 20px;
+    background: var(--azul);
+
+}
+
+.copy p {
+    max-width: 100%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* RESPONSIVO */
+
+/* RESOLUÇÃO 1366X768 */
+@media (max-width: 1367px) {
+    p {
+        font-size: 1em;
+        letter-spacing: .05em;
+        line-height: 1.4em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .projetos p, .formulario p{
+        font-size: 1em;
+        letter-spacing: .05em;
+        line-height: 1.4em;
+    }
+
+    header .logo{
+        max-width: 150px;
+        margin: 20px;
+    }
+
+    nav {
+        width: 30px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .infoBanner {
+        /* margin: -200px 40px 0; */
+        left: 20%;
+        max-width: 400px;
+        height: 400px;
+    }
+
+    /* Icon Down */
+    .iconDown {
+        position: relative;
+        max-width: 40px;
+        margin: -50px auto 0;
+    }
+
+    .descricao {
+        margin: 100px 20px;
+        width: 1000px;
+    }
+
+    .copy {
+        padding: 10px;
+
+    }
+
+    .copy p {
+        font-size: .7em;
+    }
+}
+
+
+/*RESOLUÇÃO 600px*/
+@media (max-width: 600px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    p {
+        color: var(--cinza);
+        font-size: 1.2em;
+        letter-spacing: .05em;
+        line-height: 1.4em;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: var(--azul);
+    }
+
+    header {
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 1);
+    }
+
+    .sliderNandoDiversidade {
+        position: relative;
+        top: 95px;
+    }
+
+    header .logo {
+        max-width: 120px;
+        margin: 30px;
+    }
+
+    nav {
+        width: 25px;
+        margin: 30px;
+    }
+
+    .descricao {
+        margin: 60px 20px 0;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .infoBanner {
+        margin: 0 20px;
+        left: 0;
+        max-width: 400px;
+        height: 400px;
+    }
+    .infoBanner p{
+        font-size: .9em;
+    }
+    
+    .infoForm {
+        max-width: 400px;
+        padding: 0 10px 60px;
+        /* margin-right: 30px; */
+    }
+}
